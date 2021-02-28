@@ -1,5 +1,6 @@
 import pandas as pd
 from scipy.stats import truncnorm
+from numpy.random import uniform
 
 gendata = pd.read_excel (r'Generation_type_data_SMR_CCS.xlsx',header=0)
 gendata_fix = pd.read_excel (r'Generation_type_data_SMR_CCS.xlsx',header=0, index_col=0)
@@ -19,15 +20,16 @@ min_vre = 0.6
 max_fp = 2
 min_fp = 0.9
 
+
 for type in gendata.iloc[:]['Type']:
-    locals()["r_fixed_"+type] = truncnorm.rvs(0, 1, size=2000)
-    locals()["r_var_"+type] = truncnorm.rvs(0, 1, size=2000)
-    locals()["r_fp_" + type] = truncnorm.rvs(0, 1, size=2000)
-    locals()["r_cap_" + type] = truncnorm.rvs(0, 1, size=2000)
+    locals()["r_fixed_"+type] = uniform(0, 1, size=5)
+    locals()["r_var_"+type] = uniform(0, 1, size=5)
+    locals()["r_fp_" + type] = uniform(0, 1, size=5)
+    locals()["r_cap_" + type] = uniform(0, 1, size=5)
 
-r_ctax = truncnorm.rvs(0, 1, size=2000)
+r_ctax = uniform(0, 1, size=5)
 
-for i in range(1,2000):
+for i in range(1,5):
     for type in gendata.iloc[:]['Type']:
         for thermal in gendata.iloc[:]['Is thermal?']:
             if thermal==True:
