@@ -1,6 +1,10 @@
 import pandas as pd
-from scipy.stats import truncnorm
+#from scipy.stats import truncnorm
 from numpy.random import uniform
+import os
+
+#os.chdir('C://Users/smoha/documents/git/ml_progress/project/copper/sample_generators/samples_inputs')
+os.chdir('/mnt/c/Users/smoha/documents/git/ml_progress/project/copper/sample_generators/samples_inputs')
 
 gendata = pd.read_excel (r'Generation_type_data_SMR_CCS.xlsx',header=0)
 gendata_fix = pd.read_excel (r'Generation_type_data_SMR_CCS.xlsx',header=0, index_col=0)
@@ -22,14 +26,14 @@ min_fp = 0.9
 
 
 for type in gendata.iloc[:]['Type']:
-    locals()["r_fixed_"+type] = uniform(0, 1, size=5)
-    locals()["r_var_"+type] = uniform(0, 1, size=5)
-    locals()["r_fp_" + type] = uniform(0, 1, size=5)
-    locals()["r_cap_" + type] = uniform(0, 1, size=5)
+    locals()["r_fixed_"+type] = uniform(0, 1, size=3000)
+    locals()["r_var_"+type] = uniform(0, 1, size=3000)
+    locals()["r_fp_" + type] = uniform(0, 1, size=3000)
+    locals()["r_cap_" + type] = uniform(0, 1, size=3000)
 
-r_ctax = uniform(0, 1, size=5)
+r_ctax = uniform(0, 1, size=3000)
 
-for i in range(1,5):
+for i in range(0,3000):
     for type in gendata.iloc[:]['Type']:
         for thermal in gendata.iloc[:]['Is thermal?']:
             if thermal==True:
@@ -39,19 +43,19 @@ for i in range(1,5):
                         variable_o_m[type] * max_th - variable_o_m[type] * min_th)
                 gendata_fix.loc[type, 'fuelprice'] = fuelprice[type] * min_fp + locals()["r_fp_" + type][i] * (
                         fuelprice[type] * max_fp - fuelprice[type] * min_fp)
-                gendata_fix.loc[type, 'capitolcost'] = capitalcost[type] * min_th + locals()["r_cap_" + type][i] * (
+                gendata_fix.loc[type, 'capitalcost'] = capitalcost[type] * min_th + locals()["r_cap_" + type][i] * (
                         capitalcost[type] * max_th - capitalcost[type] * min_th)
             else:
                 gendata_fix.loc[type, 'fixed_o_m'] = fixed_o_m[type] * min_vre + locals()["r_fixed_" + type][i] * (
                             fixed_o_m[type] * max_vre - fixed_o_m[type] * min_vre)
                 gendata_fix.loc[type, 'variable_o_m'] = variable_o_m[type] * min_vre + locals()["r_var_" + type][i] * (
                         variable_o_m[type] * max_vre - variable_o_m[type] * min_vre)
-                gendata_fix.loc[type, 'capitolcost'] = capitalcost[type] * min_vre + locals()["r_cap_" + type][i] * (
+                gendata_fix.loc[type, 'capitalcost'] = capitalcost[type] * min_vre + locals()["r_cap_" + type][i] * (
                         capitalcost[type] * max_vre - capitalcost[type] * min_vre)
 
     configuration.loc[4, 'Value'] = 200 * r_ctax[i]
-    configuration.to_excel('COPPER_Configuration_' + str(i) + '.xlsx', index=False)
+    configuration.to_excel('COPPER_configuration_' + str(i) + '.xlsx', index=False)
 
-    gendata_fix.to_excel('Generation_type_data_SMR_CCS_'+ str(i)+'.xlsx', index=True)
+    gendata_fix.to_excel('Generation_type_data_SMR_CCS_' + str(i)+'.xlsx', index=True)
 
 
