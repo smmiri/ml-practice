@@ -46,7 +46,7 @@ for i in range(0,3000):
                 gendata_fix.loc[type, 'capitalcost'] = capitalcost[type] * min_th + locals()["r_cap_" + type][i] * (
                         capitalcost[type] * max_th - capitalcost[type] * min_th)
             else:
-                gendata_fix.loc[type, 'fixed_o_m'] = fixed_o_m[type] * min_vre + locals()["r_fixed_" + type][i] * (
+                gendata_fix.loc[type, 'fixed_o_m'] = fixed_o_m[type] * min_vre + locals()[" mr_fixed_" + type][i] * (
                             fixed_o_m[type] * max_vre - fixed_o_m[type] * min_vre)
                 gendata_fix.loc[type, 'variable_o_m'] = variable_o_m[type] * min_vre + locals()["r_var_" + type][i] * (
                         variable_o_m[type] * max_vre - variable_o_m[type] * min_vre)
