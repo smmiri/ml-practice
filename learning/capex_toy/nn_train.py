@@ -88,7 +88,7 @@ y_valid = (y_valid - ymean) / ystd
 
 ic(np.isnan(x_train), np.isnan(y_train))
 
-num_hidden1 = 10
+num_hidden1 = 20
 num_features = x_train.shape[1]
 num_classes = 1
 
@@ -103,10 +103,10 @@ model = nn.Sequential(nn.Linear(num_features, num_hidden1),
 # Loss
 loss = nn.MSELoss()
 # Optimization
-optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
 # Train
-num_epochs = 2000
+num_epochs = 4000
 num_samples_train = x_train.shape[0]
 num_samples_valid = x_valid.shape[0]
 num_samples_test = x_test.shape[0]
