@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0ae892c6-dcf2-4912-b0fb-108cb30b75db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project/COPPER/sample_generators/COPPER5.1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ml_progress.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ml_progress.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning/capex_toy/capacity_expansion/input_sample_generator_capex.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning/capex_toy/capacity_expansion/input_sample_generator_capex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning/capex_toy/electricity_capacity_expansion.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning/capex_toy/electricity_capacity_expansion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning/capex_toy/nn_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning/capex_toy/nn_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning/nn_economic_dispatch_toymodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning/nn_economic_dispatch_toymodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/COPPER/sample_generators/COPPER5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/COPPER/sample_generators/COPPER5.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/COPPER/sample_generators/COPPER_configuration.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/COPPER/sample_generators/COPPER_configuration.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/COPPER/sample_generators/input_sample_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/COPPER/sample_generators/input_sample_generator_v1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/COPPER/sample_generators/python_code_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/COPPER/sample_generators/python_code_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/COPPER/sample_generators/samples_inputs/COPPER5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/COPPER/sample_generators/samples_shell/COPPER5.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/COPPER/sample_generators/shell_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/COPPER/sample_generators/shell_generator.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1zO6Sjy9zw2IZzDec3iDGh9R39V" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/learning/capex_toy/runs" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\smoha\Documents\Git\ml_progress\learning\capex_toy\runs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\smoha\Documents\Git\ml_progress\learning\capex_toy" />
+      <recent name="C:\Users\smoha\Documents\Git\ml_progress\learning\capex_toy\capacity_expansion" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.capex_cc_to_cap">
+    <configuration name="capex_cc_to_cap" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ml_progress" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning/capex_toy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning/capex_toy/capex_cc_to_cap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="electricity_capacity_expansion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml_progress" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning/capex_toy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning/capex_toy/electricity_capacity_expansion.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="input_sample_generator_capex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml_progress" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/learning/capex_toy/capacity_expansion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning/capex_toy/capacity_expansion/input_sample_generator_capex.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="input_sample_generator_v1.1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml_progress" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/COPPER/sample_generators" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/COPPER/sample_generators/input_sample_generator_v1.1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.capex_cc_to_cap" />
+      <item itemvalue="Python.electricity_capacity_expansion" />
+      <item itemvalue="Python.input_sample_generator_capex" />
+      <item itemvalue="Python.input_sample_generator_v1.1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.capex_cc_to_cap" />
+        <item itemvalue="Python.electricity_capacity_expansion" />
+        <item itemvalue="Python.input_sample_generator_capex" />
+        <item itemvalue="Python.input_sample_generator_v1.1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ae892c6-dcf2-4912-b0fb-108cb30b75db" name="Changes" comment="" />
+      <created>1634006789584</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634006789584</updated>
+      <workItem from="1634006790919" duration="4706000" />
+      <workItem from="1634056657205" duration="2874000" />
+      <workItem from="1634069900104" duration="1977000" />
+      <workItem from="1634166497583" duration="2392000" />
+      <workItem from="1634233123471" duration="1188000" />
+      <workItem from="1634371752131" duration="318000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/learning/capex_toy/capex_cc_to_cap.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
