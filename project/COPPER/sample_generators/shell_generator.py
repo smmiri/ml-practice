@@ -7,7 +7,7 @@ os.chdir('/mnt/c/Users/smoha/documents/git/ml_progress/project/copper/sample_gen
 for i in range(0,3000):
     file_name = 'COPPER5_' +str(i)+'.sh'
     #print(file_name)
-    shutil.copy2('COPPER5.sh', file_name)
+    shutil.copy2('scripts/COPPER5.sh', file_name)
     
     with open(file_name, 'rt') as shell_file:
         shell_file_lines = shell_file.readlines()

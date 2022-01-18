@@ -11,7 +11,7 @@ path = os.getcwd()  # use your path
 li_dem = []
 li_gen = []
 li_res = []
-for counter in range(1, 999):
+for counter in range(0, 1000):
     df = pd.read_csv(path + '/data/dem_data_%d.csv' % counter, usecols=['dem'])
     li_dem.append(df['dem'].to_numpy())
     df = pd.read_csv(path + '/data/gen_data_%d.csv' % counter, usecols=['cos', 'cap'])

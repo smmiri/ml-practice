@@ -18,18 +18,14 @@ li_dem = []
 li_gen = []
 li_res = []
 li_vom = []
-for counter in range(0, 999):
-    #df = pd.read_csv(path + '/data' + '/dem_data_%d.csv' % counter, usecols=['dem'])
-    #li_dem.append(df['dem'].to_numpy())
-    df = pd.read_csv(path + '/capex_toy/gen_data_%d.csv' % counter, usecols=['ccost', 'fomcost', 'cap'])
+for i in range(0, 1000):
+    df = pd.read_csv('gen_data_{}.csv'.format(i), usecols=['ccost', 'fomcost', 'cap'])
     li_gen.append(df.to_numpy().flatten())
-    df = df = pd.read_csv(path + '/capex_toy/gen_data_%d.csv' % counter, usecols=['vomcost'], skiprows=[6,7])
+
+    df = pd.read_csv('gen_data_{}.csv'.format(i), usecols=['vomcost'], skiprows=[6,7])
     li_vom.append(df.to_numpy().flatten())
-    df = pd.read_csv(path + '/capex_toy/result_cap_%d.csv' % counter, usecols=['cap'], skiprows=[6])
-    # df = pd.read_csv(path+'/gen_result_%d.csv' % counter, usecols = ['g','gen'])
-    # d = {}
-    # for i in df['g'].unique():
-    #    d[i] = [df['gen'][j] for j in df[df['g']==i].index]
+
+    df = pd.read_csv('result_cap_{}.csv'.format(i), usecols=['cap'], skiprows=[6])
     li_res.append(df.to_numpy().flatten())
 
 li = np.concatenate((li_vom, li_gen), axis=1)
@@ -88,13 +84,19 @@ y_valid = (y_valid - ymean) / ystd
 
 ic(np.isnan(x_train), np.isnan(y_train))
 
-num_hidden1 = 20
+num_hidden1 = 32
+num_hidden2 = 32
 num_features = x_train.shape[1]
 num_classes = 1
 
 model = nn.Sequential(nn.Linear(num_features, num_hidden1),
+                      nn.Linear(num_hidden1,num_hidden2),
                       nn.ReLU(),
-                      nn.Linear(num_hidden1, num_classes),
+                      nn.Linear(num_hidden1, num_hidden2),
+                      nn.ReLU(),
+                      nn.Linear(num_hidden1, num_hidden2),
+                      nn.ReLU(),
+                      nn.Linear(num_hidden2, num_classes),
                       )
 
 # model_ft = models.resnet152(pretrained=True)
@@ -103,10 +105,10 @@ model = nn.Sequential(nn.Linear(num_features, num_hidden1),
 # Loss
 loss = nn.MSELoss()
 # Optimization
-optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.1)
 
 # Train
-num_epochs = 4000
+num_epochs = 1000
 num_samples_train = x_train.shape[0]
 num_samples_valid = x_valid.shape[0]
 num_samples_test = x_test.shape[0]

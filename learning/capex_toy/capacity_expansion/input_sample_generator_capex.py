@@ -1,7 +1,7 @@
 # import icecream as ic
 
+import math
 from numpy.random import uniform
-
 import pandas as pd
 
 
@@ -51,7 +51,7 @@ for g in gen_data.iloc[:]['g']:
     locals()["ccost_"+g] = uniform(0, 1, size=1000)
     locals()["fomcost_"+g] = uniform(0, 1, size=1000)
     locals()["vomcost_"+g] = uniform(0, 1, size=1000)
-    locals()["cap_"+g] = uniform(0, 1, size=1000)
+    locals()["cap_"+g] = uniform(0.5, 2, size=1000)
 
 
 
@@ -63,10 +63,10 @@ for i in range(0,1000):
 #   for t in dem_data.iloc[:]['t']:
 #       dem_data.iloc[t-1,1] = locals()["dem_"+str(t)][i]
     for g in gen_type:
-        gen_data_rand.loc[g, 'ccost'] = ccost[g] * 0.8 + ccost[g] * 0.4 * locals()["ccost_" + g][i]
-        gen_data_rand.loc[g, 'fomcost'] = fomcost[g] * 0.8 + fomcost[g] * 0.4 * locals()["fomcost_" + g][i]
-        gen_data_rand.loc[g, 'vomcost'] = vomcost[g] * 0.8 + vomcost[g] * 0.4 * locals()["vomcost_" + g][i]
-        gen_data_rand.loc[g, 'cap'] = cap[g] * 0.8 + cap[g] * 0.4 * locals()["cap_" + g][i]
+        #gen_data_rand.loc[g, 'ccost'] = ccost[g] * 0.8 + ccost[g] * 0.4 * locals()["ccost_" + g][i]
+        #gen_data_rand.loc[g, 'fomcost'] = fomcost[g] * 0.8 + fomcost[g] * 0.4 * locals()["fomcost_" + g][i]
+        #gen_data_rand.loc[g, 'vomcost'] = vomcost[g] * 0.8 + vomcost[g] * 0.4 * locals()["vomcost_" + g][i]
+        gen_data_rand.loc[g, 'cap'] = round(cap[g] * locals()["cap_" + g][i], 3)
 
 #   dem_data.to_csv('dem_data_'+str(i)+'.csv', index=False)
     gen_data_rand.to_csv('gen_data_' + str(i) + '.csv', index=gen_type)

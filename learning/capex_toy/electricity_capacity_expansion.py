@@ -4,7 +4,7 @@ import os
 from pyomo.environ import *
 from pyomo.opt import SolverFactory
 
-for i in range(964,1000):
+for i in range(0,1000):
     #Define an abstract model
     model = AbstractModel()
 
