@@ -10,7 +10,7 @@ hydro on/off, ccs on/off, transmission on/off)
 two combinations of technology toggles: first 1) all on and 2) all off except transmission
 """
 
-CCS = True
+CCS = False
 
 provinces_full = {
             "British Columbia": 4497392,
@@ -38,10 +38,10 @@ os.makedirs(path+'/configurations',exist_ok=True)
 os.makedirs(path+'/capital_costs',exist_ok=True)
 os.makedirs(path+'/shells',exist_ok=True)
 os.makedirs(path + '/scripts', exist_ok=True)
-#os.makedirs(path + '/ctax', exist_ok=True)
+os.makedirs(path + '/ctax', exist_ok=True)
 
-#gendata = pd.read_excel (r'Generation_type_data_SMR_CCS.xlsx',header=0)
-#gendata_fix = pd.read_excel (r'Generation_type_data_SMR_CCS.xlsx',header=0, index_col=0)
+gendata = pd.read_excel (r'Generation_type_data_SMR_CCS.xlsx',header=0)
+gendata_fix = pd.read_excel (r'Generation_type_data_SMR_CCS.xlsx',header=0, index_col=0)
 if CCS:
     gendata = pd.read_excel (r'Generation_type_data_SMR_CCS.xlsx',header=0)
     gendata_fix = pd.read_excel (r'Generation_type_data_SMR_CCS.xlsx',header=0, index_col=0)
@@ -67,15 +67,15 @@ min_vre = 0.6
 
 
 for type in gendata.iloc[:]['Type']:
-    locals()["r_cap_" + type] = uniform(0, 1, size=3000)
+    locals()["r_cap_" + type] = uniform(0, 1, size=1000)
 
 #for PDS in pds:
-#    locals()["r_ctax_"+ PDS]= uniform(0.5, 2, size=3000)
+#    locals()["r_ctax_"+ PDS]= uniform(0.5, 2, size=1000)
 
-r_ctax = uniform(0.5, 1.5, size=3000)
-r_growth = uniform(0.1, 3.7, size=3000)
+r_ctax = uniform(0, 1, size=1000)
+r_growth = uniform(0.1, 3.7, size=1000)
 
-for i in range(0, 3000):
+for i in range(0, 1000):
     
     for type in gendata.iloc[:]['Type']:
         for thermal in gendata.iloc[:]['Is thermal?']:
@@ -86,7 +86,7 @@ for i in range(0, 3000):
                 gendata_fix.loc[type, 'capitalcost'] = capitalcost[type] * min_vre + locals()["r_cap_" + type][i] * (
                         capitalcost[type] * max_vre - capitalcost[type] * min_vre)
 
-    configuration.loc[4, 'Value'] = round(r_ctax[i]*430+70, 0)
+    configuration.loc[4, 'Value'] = round(r_ctax[i]*(700)+50, 0)
 
     annualgrowth_new = annualgrowth.multiply(r_growth[i])
     provinces_new_pop = {}
@@ -110,7 +110,7 @@ for i in range(0, 3000):
         gendata_fix.to_excel('Generation_type_data_SMR_CCS_{}.xlsx'.format(i),index=True)
     else:
         gendata_fix.to_excel('Generation_type_data_{}.xlsx'.format(i),index=True)
-
+    
     os.chdir(path)
 
 

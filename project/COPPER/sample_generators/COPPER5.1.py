@@ -13,7 +13,7 @@ import sys
 
 start = time.time()
 #os.chdir('/home/arjmand/COPPER5')
-cwd = '/project/def-mcpher16/ml_shared/COPPER5_CapCost_CTax_PopGrowth_CCS_True/inputs/'
+cwd = '/project/rrg-mcpher16/ml_shared/ctax_cap_popgrowth_09052022/inputs/'
 os.makedirs(cwd, exist_ok=True)
 os.chdir(cwd)
 #ctax = 50
@@ -30,8 +30,8 @@ pump_continous = True
 emission_limit = False
 emission_limit_ref_year = 2017
 local_gas_price = True
-OBPS_on = True
-SMR_CCS = True
+OBPS_on = False
+SMR_CCS = False
 GPS = True
 CPO = True
 min_installed_gas_PHP = False
@@ -1424,7 +1424,7 @@ if CPO:
 if GPS:
     folder_name += '_GPS'
 
-cwd = '/project/def-mcpher16/ml_shared/COPPER5_CapCost_CTax_PopGrowth_CCS_True/outputs/'
+cwd = '/project/rrg-mcpher16/ml_shared/ctax_cap_popgrowth_09052022/outputs/'
 os.makedirs(cwd, exist_ok=True)
 os.chdir(cwd)
 os.makedirs(folder_name, exist_ok=True)
