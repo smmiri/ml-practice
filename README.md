@@ -1,4 +1,4 @@
-# Machine learning projects
+# Machine learning practice and projects
 These training data generation and toy-model nn projects are donve for my PhD research tasks.
 
 The sample_generator directory includes data generation pipelines for the COPPER planning model input files. Different versions for different input parameters. .
